@@ -48,4 +48,7 @@ def get_average_age_for_season(data, season)
     if info == season
       info.each do |k,v|
         ages << k["age"].to_f
+      end
+    end
+  end
 end
