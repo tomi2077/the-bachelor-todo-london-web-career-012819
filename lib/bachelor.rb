@@ -47,10 +47,10 @@ def get_average_age_for_season(data, season)
   data.each do |sea,info|
     if info == season
       info.each do |k,v|
-        ages << k["age"].to_f
+        ages << k["age"].to_i
       end
     end
   end
-  ages.sum.fdiv(ages.size).floor
+  ages.sum.fdiv(ages.size)
   ages
 end
