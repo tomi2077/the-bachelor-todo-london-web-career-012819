@@ -21,10 +21,11 @@ def get_contestant_name(data, occupation)
 end
 
 def count_contestants_by_hometown(data, hometown)
+  count = 0
   data.each do |sea, info|
     info.each do |k,v|
       if k["hometown"] == hometown
-        return k["name"].size
+        count += 1
       end
     end
   end
