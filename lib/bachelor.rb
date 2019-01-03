@@ -13,7 +13,7 @@ end
 def get_contestant_name(data, occupation)
   data.each do |sea, info|
     info.each do |k,v|
-      if k.values.include?"occupation"
+      if k == occupation
         return  k["name"]
       end
     end
