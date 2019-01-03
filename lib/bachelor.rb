@@ -25,6 +25,9 @@ def count_contestants_by_hometown(data, hometown)
     info.each do |k,v|
       if v["hometown"] == hometown
         return k["name"].size
+      end
+    end
+  end
 end
 
 def get_occupation(data, hometown)
