@@ -51,6 +51,6 @@ def get_average_age_for_season(data, season)
       end
     end
   end
-  ages.sum.fdiv(ages.size)
+  ages.sum.fdiv(ages.size).ceil
   ages
 end
