@@ -52,4 +52,5 @@ def get_average_age_for_season(data, season)
     end
   end
   average = (ages.inject(:+)/ages.length).floor
+  average
 end
