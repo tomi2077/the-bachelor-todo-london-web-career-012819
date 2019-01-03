@@ -43,14 +43,12 @@ def get_occupation(data, hometown)
 end
 
 def get_average_age_for_season(data, season)
-  ages = []
-  data.each do |sea,info|
-    if info == season
-      info.each do |k,v|
-        ages << k["age"].to_f
-      end
-    end
+    ages = data[season].collect do |age|
+    contestant["age"].to_i
   end
-  average = (ages.inject(:+)/ages.length).floor
-  average
+
+  summed_ages = contestant_ages.reduce(0) {|sum, age| sum += age}
+  contestant_count =  contestant_ages.count.to_f
+  (summed_ages/contestant_count).round
+
 end
