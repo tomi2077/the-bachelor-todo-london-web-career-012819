@@ -35,8 +35,8 @@ end
 def get_occupation(data, hometown)
   data.each do |sea, info|
     info.each do |k,v|
-      if k["hometown"] hometown
-        return "Journalist"
+      if k["hometown"] == hometown
+        return k["occupation"]
       end
     end
   end
