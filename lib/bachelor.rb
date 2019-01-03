@@ -44,10 +44,10 @@ end
 
 def get_average_age_for_season(data, season)
     ages = data[season].collect do |age|
-    contestant["age"].to_i
+    age["age"].to_i
   end
 
-  summed_ages = ages.reduce(0) {|sum, age| sum += age}
+  summed_ages = ages.reduce(0) {|sum, age1| sum += age1}
   contestant_count =  contestant_ages.count.to_f
   (summed_ages/contestant_count).round
 
