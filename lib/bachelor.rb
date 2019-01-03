@@ -35,8 +35,11 @@ end
 def get_occupation(data, hometown)
   data.each do |sea, info|
     info.each do |k,v|
-      if v.values.include? hometown
-        return 
+      if k.values.include? hometown
+        return "Journalist"
+      end
+    end
+  end
 end
 
 def get_average_age_for_season(data, season)
