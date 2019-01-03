@@ -15,9 +15,9 @@ def get_contestant_name(data, occupation)
     info.each do |k,v|
       if k.values.include?"occupation"
         return  k["name"]
-      
-    
-  
+      end
+    end
+  end
 end
 
 def count_contestants_by_hometown(data, hometown)
