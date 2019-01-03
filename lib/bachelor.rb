@@ -23,7 +23,7 @@ end
 def count_contestants_by_hometown(data, hometown)
   data.each do |sea, info|
     info.each do |k,v|
-      if v["hometown"] == hometown
+      if k["hometown"] == hometown
         return k["name"].size
       end
     end
